@@ -1,0 +1,54 @@
+package com.javarush.test.level05.lesson12.home02;
+
+/* Man and Woman
+1. Внутри класса Solution создай public static классы Man и Woman.
+2. У классов должны быть поля: name(String), age(int), address(String).
+3. Создай конструкторы, в которые передаются все возможные параметры.
+4. Создай по два объекта каждого класса со всеми данными используя конструктор.
+5. Объекты выведи на экран в таком формате [name + " " + age + " " + address].
+*/
+
+public class Solution
+{
+    public static void main(String[] args)
+    {
+        // Создай по два объекта каждого класса тут
+        Man man01 = new Man("Петр", 42, "ул. Сегедская, 30-б");
+        Man man02 = new Man("Станислав", 21, "ул. Вильямса, 24");
+
+        Woman woman01 = new Woman("Анна", 35, "ул. Глушкова, 25");
+        Woman woman02 = new Woman("Наталья", 27, "ул. Вильямса, 54");
+
+
+        // Выведи их на экран тут
+        System.out.println(man01.name + " " + man01.age + " " + man01.address);
+        System.out.println(man02.name + " " + man02.age + " " + man02.address);
+        System.out.println(woman01.name + " " + woman01.age + " " + woman01.address);
+        System.out.println(woman02.name + " " + woman02.age + " " + woman02.address);
+    }
+
+    // Напиши тут свои классы
+    public static class Man {
+        String name;
+        int age;
+        String address;
+
+        public Man(String name, int age, String adress) {
+            this.name = name;
+            this.age = age;
+            this.address = adress;
+        }
+    }
+
+    public static class Woman {
+        String name;
+        int age;
+        String address;
+
+        public Woman(String name, int age, String adress) {
+            this.name = name;
+            this.age = age;
+            this.address = adress;
+        }
+    }
+}
