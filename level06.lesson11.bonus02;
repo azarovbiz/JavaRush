@@ -40,16 +40,16 @@ public class Solution
         Cat catGrandmother = new Cat(grandmotherName, null, null);
 
         String fatherName = reader.readLine();
-        Cat catFather = new Cat(fatherName, null, catGrandfather);
+        Cat catFather = new Cat(fatherName, catGrandfather, null);
 
         String motherName = reader.readLine();
-        Cat catMother = new Cat(motherName, catGrandmother, null);
+        Cat catMother = new Cat(motherName, null, catGrandmother);
 
         String sonName = reader.readLine();
-        Cat catSon = new Cat(sonName, catMother, catFather);
+        Cat catSon = new Cat(sonName, catFather, catMother);
 
         String daughterName = reader.readLine();
-        Cat catDaughter = new Cat(daughterName, catMother, catFather);
+        Cat catDaughter = new Cat(daughterName, catFather, catMother);
 
 
         System.out.println(catGrandfather);
@@ -71,7 +71,7 @@ public class Solution
             this.name = name;
         }
 
-        Cat(String name, Cat mother, Cat father)
+        Cat(String name, Cat father, Cat mother)
         {
             this.name = name;
             this.mother = mother;
